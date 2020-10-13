@@ -76,11 +76,11 @@ export default class InfoPanel extends React.Component {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Die für die Erstellung des Codes von Ihnen angegebene E-Mail-Adresse wird von mir nicht gespeichert und kann aufgrund einer kryptografischen Verschlüsselung von mir nicht rückverfolgt werden. Diese Verschlüsselung ermöglicht es allerdings mit der gleichen E-Mail-Adresse den ID-Code erneut abzufragen. Bitte archivieren Sie die E-Mail mit Ihrem ID-Code dennoch sorgfältig, damit Sie bei allen Befragungen und beim Üben in Bettermarks, sowie im Anschluss an den Mathe-Grundlagen-Test einfach darauf zugreifen können.
+            Die für die Erstellung des Codes von Ihnen angegebene E-Mail-Adresse wird von mir nicht gespeichert und kann aufgrund eines kryptografischen Hashingverfahrens (sha256) von mir nicht rückverfolgt werden. Dieses Hashing ermöglicht es allerdings mit der gleichen E-Mail-Adresse den ID-Code erneut abzufragen. Bitte archivieren Sie die E-Mail mit Ihrem ID-Code dennoch sorgfältig, damit Sie bei allen Befragungen und beim Üben in Bettermarks, sowie im Anschluss an den Mathe-Grundlagen-Test einfach darauf zugreifen können.
 
             Mit der Anforderung des ID-Codes stimmen Sie zu, dass die in der Studie von Ihnen gemachten Angaben und persönlichen Daten in anonymisierter Form für die genannten Forschungszwecke verwendet werden dürfen.
 
-            Bei Fragen wenden Sie sich bitte per E-Mail an kerstin.steimle@hs-heilbronn.de
+            Bei Fragen wenden Sie sich bitte per E-Mail an <Link href="mailto:kerstin.steimle@hs-heilbronn.de">kerstin.steimle@hs-heilbronn.de</Link>
 
               </Typography>
         </AccordionDetails>
@@ -107,10 +107,10 @@ export default class InfoPanel extends React.Component {
               </div><div>
               Postadresse: Max-Planck-Str. 39, 74081 Heilbronn
             </div>
-            <div>
+            {/* <div>
               <b>Technische Realisierung:</b>
             </div>
-            <div><Link href="mailto:support@stei.ml">support@stei.ml</Link></div>
+            <div><Link href="mailto:support@stei.ml">support@stei.ml</Link></div> */}
           </Typography>
         </AccordionDetails>
       </Accordion>
