@@ -92,7 +92,7 @@ export default class RequestForm extends React.Component {
                             />
                             <TextField disabled={!this.state.email} id="standard-basic" label="E-Mail" name="emailAddress" onKeyUp={this.handleChangeText} />
                         </FormGroup>
-                        <FormGroup>
+                        <FormGroup hidden>
                             <FormControlLabel
                                 control={<Checkbox checked={this.state.sms} onChange={this.handleChange} name="sms" disabled/>}
                                 label="SMS"
