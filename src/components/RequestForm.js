@@ -63,7 +63,7 @@ export default class RequestForm extends React.Component {
         params.append('phone', this.state.phone);
         params.append('emailAddress', this.state.emailAddress);
         params.append('captcha', this.state.captcha);
-        axios.post('https://backend.id.stei.ml/send',
+        axios.post('https://backend.flow.stei.ml/send/send',
             params, {
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
