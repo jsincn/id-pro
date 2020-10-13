@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Link} from '@material-ui/core';
+import { Grid, Link} from '@material-ui/core';
 
 
 
@@ -10,12 +10,17 @@ export default class Footer extends React.Component {
 
         return (
             <div>
-                <div className="footer-copyright text-center py-3">
-                    <Container>
+                <Grid container spacing={3} style={{textAlign:'center'}}>
+                    <Grid item md={6}>
                         Tool by <Link href="https://stei.ml">Jakob Steimle. </Link>Fork on <Link href="">Github</Link>.
-
-                    </Container>
-                </div>
+                    </Grid>
+                    <Grid item md={6}>
+                        Die zu Verlosenden Tickets werden zur Verfügung gestellt mit freundlicher Unterstüzung von
+                        <div>
+                        <img src="logoTripsDrill.png" alt="Logo Tripsdrill" style={{height:5 +'em'}}></img>
+                        </div>
+                    </Grid>
+                </Grid>
             </div>)
     }
 }

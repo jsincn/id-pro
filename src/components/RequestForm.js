@@ -18,7 +18,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 export default class RequestForm extends React.Component {
 
     state = {
-        email: false,
+        email: true,
         sms: false,
         phone: "",
         emailAddress: "",
@@ -80,43 +80,46 @@ export default class RequestForm extends React.Component {
     render() {
         return (
             <Container>
-                <h3>{ this.state.message }</h3>
-                { this.state.form_visible ?
-                <FormControl component="fieldset">
-                    <FormLabel component="legend">Empfangsmethode</FormLabel>
-                    <FormGroup>
-                        <FormGroup>
-                            <FormControlLabel
+                <h3>{this.state.message}</h3>
+
+                {this.state.form_visible ?
+                    <div>
+                        <h4>Unter allen Teilnehmern werden zwei Tickets für den Erlebnispark Tripsdrill in Cleebronn verlost!</h4>
+
+                        <FormControl component="fieldset">
+                            <FormLabel component="legend">Empfangsmethode</FormLabel>
+                            <FormGroup>
+                                <FormGroup>
+                                    {/* <FormControlLabel
                                 control={<Checkbox checked={this.state.email} onChange={this.handleChange} name="email" />}
                                 label="E-Mail"
-                            />
-                            <TextField disabled={!this.state.email} id="standard-basic" label="E-Mail" name="emailAddress" onKeyUp={this.handleChangeText} />
-                        </FormGroup>
-                        <FormGroup hidden>
+                            /> */}
+                                    <TextField disabled={!this.state.email} id="standard-basic" label="E-Mail" name="emailAddress" onKeyUp={this.handleChangeText} />
+                                </FormGroup>
+                                {/* <FormGroup hidden>
                             <FormControlLabel
                                 control={<Checkbox checked={this.state.sms} onChange={this.handleChange} name="sms" disabled/>}
                                 label="SMS"
                             />
                             <MuiPhoneNumber disabled={!this.state.sms} defaultCountry={'de'} onChange={this.handleChangePhone} />
-                        </FormGroup>
-                    </FormGroup>
-                    <FormControlLabel
-                        control={<Checkbox checked={this.state.acceptedPrivacy} onChange={this.handleChange} name="acceptedPrivacy" />}
-                        label="Ich habe die Datenschutzerklärung gelesen und verstanden."
-                    />
-                    <FormHelperText>Durch Anfordern des Codes bestätigen sie, dass sie die Datenschutz Hinweise gelesen haben. Falls sie bereits einen Code angefordert hatten, benutzen sie bitte die gleiche E-Mail Adresse oder Telefonnummer um ihren existierenden Code erneut zu erhalten.</FormHelperText>
-                    <ReCAPTCHA
-                        sitekey="6Lc33tMZAAAAABLinsP0Q-kJwG2oLwL27gaXXifP"
-                        onChange={this.onSubmitCaptcha}
-                    />
+                        </FormGroup> */}
+                            </FormGroup>
+                            <FormControlLabel
+                                style={{ paddingTop: 10, paddingBottom: 10 }}
+                                control={<Checkbox checked={this.state.acceptedPrivacy} onChange={this.handleChange} name="acceptedPrivacy" />}
+                                label="Ich habe die Datenschutzerklärung gelesen und verstanden."
+                            />
+                            <FormHelperText>Hiermit willige ich ein, dass meine personenbezogenen Daten (Alter, Geschlecht, Abschluss, Mathematiknote) in anonymisierter Form in die Auswertung der Studie aufgenommen werden kann. </FormHelperText>
+                            <ReCAPTCHA
+                                style={{ paddingTop: 10, paddingBottom: 10 }}
+                                sitekey="6Lc33tMZAAAAABLinsP0Q-kJwG2oLwL27gaXXifP"
+                                onChange={this.onSubmitCaptcha}
+                            />
 
-                    <Button variant="contained" onClick={e => this.handleFormSubmit(e)} color="primary" disabled={(!this.state.email && !this.state.sms) || !this.state.captcha || !this.state.acceptedPrivacy}>Code Anfordern</Button>
-                </FormControl>
-                : null}
-                {this.state.waiting_visible ? <div>
-                    Please wait...
-                </div>
-                : null}
+                            <Button variant="contained" onClick={e => this.handleFormSubmit(e)} color="primary" disabled={(!this.state.email && !this.state.sms) || !this.state.captcha || !this.state.acceptedPrivacy}>Code Anfordern</Button>
+                        </FormControl>
+                    </div>
+                    : null}
             </Container>
         );
     }
