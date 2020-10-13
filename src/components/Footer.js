@@ -17,7 +17,7 @@ export default class Footer extends React.Component {
                     <Grid item md={6}>
                         Die zu Verlosenden Tickets werden zur Verfügung gestellt mit freundlicher Unterstüzung von
                         <div>
-                        <img src="logoTripsDrill.png" alt="Logo Tripsdrill" style={{height:5 +'em'}}></img>
+                        <img src="logoTripsdrill.png" alt="Logo Tripsdrill" style={{height:5 +'em'}}></img>
                         </div>
                     </Grid>
                 </Grid>
