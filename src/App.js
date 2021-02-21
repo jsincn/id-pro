@@ -29,7 +29,7 @@ function App() {
 
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <h1>ID-PRO für "Flow Studie"</h1>
+          <h1>Motivation, Motiv und Denkstil – die Wirkung von Flow auf das Lernen von Mathematik-Grundlagen</h1>
         </Grid>
         <Grid item md={4}>
           <Paper className={classes.paper}><RequestForm></RequestForm></Paper>
