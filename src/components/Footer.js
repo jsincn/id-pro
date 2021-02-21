@@ -11,15 +11,10 @@ export default class Footer extends React.Component {
         return (
             <div>
                 <Grid container spacing={3} style={{textAlign:'center'}}>
-                    <Grid item md={6}>
-                        Tool by <Link href="https://stei.ml">Jakob Steimle. </Link>Fork on <Link href="">Github</Link>.
-                    </Grid>
-                    <Grid item md={6}>
-                        Die zu verlosenden Tickets werden zur Verfügung gestellt mit freundlicher Unterstüzung von
-                        <div>
-                        <img src="logoTripsdrill.png" alt="Logo Tripsdrill" style={{height:5 +'em'}}></img>
-                        </div>
-                    </Grid>
+                 
+                        Tool by <Link href="https://stei.ml">Jakob Steimle. </Link>Fork on <Link href="https://github.com/jsincn/id-pro">Github</Link>.
+                    
+                  
                 </Grid>
             </div>)
     }
