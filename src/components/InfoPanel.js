@@ -1,5 +1,5 @@
 import React from 'react';
-import { Accordion, AccordionSummary, AccordionDetails, Typography, Link } from '@material-ui/core';
+import { List, ListItem, ListItemText, Accordion, AccordionSummary, AccordionDetails, Typography, Link } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
@@ -24,16 +24,16 @@ export default class InfoPanel extends React.Component {
             vielen Dank, dass sich an meiner Forschungsarbeit zum Thema „Motivation, Motiv und Denkstil – die Wirkung von Flow auf das Lernen von Mathematik-Grundlagen“ beteiligen. Im Rahmen einer Längsschnittanalyse wird ermittelt, welche Faktoren Einfluss auf das Erleben von Flow beim Lernen haben und inwiefern dadurch die Übungszeiten und der Spaß am Lernen auch in einem Fach wie Mathematik erhöht werden kann. Längsschnittanalyse heißt in diesem Fall, dass ich Sie zu verschiedenen Zeitpunkten befragen möchte. Der erste Fragebogen ist etwas umfangreicher und dauert in der Bearbeitung etwa 15 Minuten, alle weiteren Befragungen sind deutlich kürzer und dauern maximal 5 Minuten in der Bearbeitung.
           </div>
           <div style={{ marginTop: 10 }}>
-            Damit die Ergebnisse Anonym immer einer Person zuzuordnen sind, müssen Sie mit dieser E-Mail einen ID-Code beantragen. Bitte bewahren Sie diesen 4-stelligen Zahlencode (Zahl zwischen 1000 und 9999) gut auf, er muss auf allen Fragebögen und auch beim Üben und beim MGT in bettermarks eingegeben werden.
+            Damit die Ergebnisse anonym immer einer Person zuzuordnen sind, müssen Sie mit dieser E-Mail einen ID-Code beantragen. Bitte bewahren Sie diesen 4-stelligen Zahlencode (Zahl zwischen 1000 und 9999) gut auf, er muss auf allen Fragebögen und auch beim Üben und beim MGT in bettermarks eingegeben werden.
           </div>
           <div style={{ marginTop: 10 }}>
-            Die ersten beiden Fragebögen dürfen Sie während der Einführungsveranstaltung beantworten. Sollten das bei Ihnen nicht geklappt haben, finden Sie den ersten Fragebogen unter folgendem Link https://www.soscisurvey.de/flowstudie_2021/ .
-
-            Ebenso sollten Sie immer vor und nach dem Üben einen kurzen Fragebogen ausfüllen, dabei geht es um Ihre momentane Stimmungslage, das Ausfüllen, dauert nur wenige Minuten.
-
-            Vor dem Üben bitte den Fragebogen zu Ihrer aktuellen Motivation ausfüllen - https://www.soscisurvey.de/motivationSS21/
-            Nach dem Üben bitte den Fragebogen zum Flow-Erleben ausfüllen - https://www.soscisurvey.de/FlowSS21/
-
+            Die ersten beiden Fragebögen dürfen Sie während der Einführungsveranstaltung beantworten. Sollten das bei Ihnen nicht geklappt haben, finden Sie den ersten Fragebogen unter folgendem Link: <Link href="https://www.soscisurvey.de/flowstudie_2021/">Link zum Fragebogen</Link>
+            <br></br>
+            Ebenso sollten Sie immer vor und nach dem Üben einen kurzen Fragebogen ausfüllen, dabei geht es um Ihre momentane Stimmungslage, das Ausfüllen dauert nur wenige Minuten.
+            </div><div style={{ marginTop: 10 }}>
+            Vor dem Üben bitte den Fragebogen zu Ihrer aktuellen Motivation ausfüllen - <Link href="https://www.soscisurvey.de/motivationSS21/">Link zum Fragebogen</Link>
+            </div><div style={{ marginTop: 0 }}>Nach dem Üben bitte den Fragebogen zum Flow-Erleben ausfüllen - <Link href="https://www.soscisurvey.de/FlowSS21/">Link zum Fragebogen</Link>
+            </div><div style={{ marginTop: 10 }}>
 
             Ein letzter kurzer Fragebogen kommt dann nach dem Mathe-Grundlagen-Test im April.
 
@@ -52,7 +52,7 @@ export default class InfoPanel extends React.Component {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Als Mitarbeiterin des E-Learning und E-Assessment Team bin ich zuständig für die Organisation und Durchführung des Mathematik-Grundlagen-Tests an der Hochschule Heilbronn. Im Rahmen meiner Promotion führe ich in diesem Semester mit den Kursteilnehmern eine Längsschnittanalyse zum Thema „Lernen im Flow“ durch. Bei Fragen zur Studie stehe ich Ihnen gerne unter der E-Mail-Adresse <Link href="mailto:kerstin.steimle@hs-heilbronn.de">kerstin.steimle@hs-heilbronn.de</Link> zur Verfügung.  </Typography>
+            Als Mitarbeiterin des E-Learning und E-Assessment Team bin ich zuständig für die Organisation und Durchführung des Mathematik-Grundlagen-Tests an der Hochschule Heilbronn. Im Rahmen meiner Promotion führe ich in diesem Semester mit den Kursteilnehmern eine Längsschnittanalyse zum Thema „Motivation, Motiv und Denkstil – die Wirkung von Flow auf das Lernen von Mathematik-Grundlagen“ durch. Bei Fragen zur Studie stehe ich Ihnen gerne unter der E-Mail-Adresse <Link href="mailto:kerstin.steimle@hs-heilbronn.de">kerstin.steimle@hs-heilbronn.de</Link> zur Verfügung.  </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -67,10 +67,23 @@ export default class InfoPanel extends React.Component {
           <Typography>
             Ihr ID-Code ist auch der Glückscode für die Verlosung von
 
-
-            1.	Preis: Raspberry Pi Zero WH Starter Kit
-            2.	Preis: Anker Sound Core Bluetooth Lautsprecher o. vergleichbar
-            3.	Preis: Anker PowerCore Slim 10,000
+            <br />
+            <List component="nav" aria-label="main mailbox folders">
+              <ListItem>
+                <ListItemText primary="1.	Preis: Raspberry Pi Zero WH Starter Kit" />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="2.	Preis: Anker Sound Core Bluetooth Lautsprecher o. vergleichbar" />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="3.	Preis: Anker PowerCore Slim 10,000" />
+              </ListItem>
+            </List>
+           
+          
+            
+            
+            
 
 
             Die Preis werden unter all den Teilnehmern verlost, die an sämtlichen Befragungen der Längsschnittanalyse teilgenommen haben.

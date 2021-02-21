@@ -11,10 +11,10 @@ export default class Footer extends React.Component {
         return (
             <div>
                 <Grid container spacing={3} style={{textAlign:'center'}}>
-                 
-                        Tool by <Link href="https://stei.ml">Jakob Steimle. </Link>Fork on <Link href="https://github.com/jsincn/id-pro">Github</Link>.
-                    
-                  
+                    <Grid item md={12}>
+                        Tool by <Link href="https://stei.ml">Jakob Steimle. </Link>Fork on <Link href="">Github</Link>.
+                    </Grid>
+        
                 </Grid>
             </div>)
     }

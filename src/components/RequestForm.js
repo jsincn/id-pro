@@ -83,7 +83,6 @@ export default class RequestForm extends React.Component {
 
                 {this.state.form_visible ?
                     <div>
-                        <h4>Unter allen Teilnehmern werden zwei Tickets für den Erlebnispark Tripsdrill in Cleebronn verlost!</h4>
 
                         <FormControl component="fieldset">
                             <FormLabel component="legend">Empfangsmethode</FormLabel>
